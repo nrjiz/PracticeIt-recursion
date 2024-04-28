@@ -1,0 +1,12 @@
+public static String repeat(String str, int k){
+    
+    if(k<0){
+        throw new IllegalArgumentException();
+    }else if(k==0){
+        return "";
+    }else {
+        String half = repeat(str,k/2);
+        if(k%2==0) return half+half;
+        else return half+half+str;
+    }
+}
