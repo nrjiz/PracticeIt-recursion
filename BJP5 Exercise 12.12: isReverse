@@ -1,0 +1,14 @@
+public static boolean isReverse (String s, String t){
+    
+    if(s.length()!=t.length()){
+        return false;
+    }
+    
+    if(s.length()==0){
+        return true;
+    }
+    
+    char c = Character.toLowerCase(s.charAt(0));
+    char h = Character.toLowerCase(t.charAt(t.length()-1));
+    return c==h && isReverse(s.substring(1),t.substring(0,t.length()-1));
+}
